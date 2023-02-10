@@ -42,8 +42,15 @@ namespace ChallengesWithTestsMark8
 
         public string GetGreeting(string nameOfPerson)
         {
-            Console.WriteLine($"Hello, {nameOfPerson}.");
-            return $"Hello, {nameOfPerson}.";
+            if ( string.IsNullOrEmpty(nameOfPerson) == true)
+            {
+                return "Hello!";
+            }
+            else
+            {
+                Console.WriteLine($"Hello, {nameOfPerson}!");
+                return $"Hello, {nameOfPerson}!";
+            }
         }
 
         public string GetHey()
